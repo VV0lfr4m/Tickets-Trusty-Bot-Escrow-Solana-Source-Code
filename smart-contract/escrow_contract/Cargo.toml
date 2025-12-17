@@ -1,0 +1,24 @@
+[package]
+name = "escrow_contract"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal escrow contract for SOL payments on Solana"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "1.18.13" # або остання сумісна з твоїм toolchain
+borsh = "0.10"              # або "1" якщо стабільна, якщо ти використовуєш Borsh для серіалізації
+thiserror = "1"             # для error types, якщо треба
+solana-security-txt = "1.1.1"
+
+[features]
+no-entrypoint = []
+default = []
+test = []
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
