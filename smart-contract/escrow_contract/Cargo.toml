@@ -9,7 +9,7 @@ crate-type = ["cdylib", "lib"]
 
 [dependencies]
 solana-program = "1.18.13" # або остання сумісна з твоїм toolchain
-borsh = "1.6.0"              # або "1" якщо стабільна, якщо ти використовуєш Borsh для серіалізації
+borsh = "1.5.1"              # або "1" якщо стабільна, якщо ти використовуєш Borsh для серіалізації
 thiserror = "1"             # для error types, якщо треба
 solana-security-txt = "1.1.1"
 
