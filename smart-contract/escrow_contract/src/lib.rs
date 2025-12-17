@@ -15,6 +15,7 @@ use solana_program::system_program;
 use solana_program::pubkey;
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::declare_id;
+use solana_security_txt::security_txt;
 
 #[cfg(not(feature = "no-entrypoint"))]
 security_txt! {
