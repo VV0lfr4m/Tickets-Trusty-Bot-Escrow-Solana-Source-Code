@@ -30,6 +30,7 @@ pub const AUTHORITY_PUBKEY: Pubkey = pubkey!("EcT7YCrKbGroidXgeQaPYUkrdyqdhYa6kv
 pub const DEFAULT_AUTORELEASE_SECS: u64 = 12*60*60; // 12 hours
 /// Escrow status
 #[derive(BorshSerialize, BorshDeserialize, PartialEq, Eq, Debug)]
+#[borsh(use_discriminant = true)]
 pub enum EscrowStatus {
     Pending = 0,
     Paid = 1,
